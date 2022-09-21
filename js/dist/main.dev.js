@@ -4,7 +4,7 @@
 function scrollEvents() {
   var sections = document.querySelectorAll('.section');
   var links = document.querySelectorAll('.nav__link');
-  var menu = document.querySelectorAll('.nav__list');
+  var menu = document.querySelector('.nav__list');
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
@@ -38,4 +38,23 @@ function scrollEvents() {
 }
 
 ;
-scrollEvents();
+scrollEvents(); // Animate Progress Bar
+
+function animateProgressBar(params) {
+  var progress = document.querySelector('.progress__bar'); //Значение скролла от верха страницы
+
+  var scrollValue = document.documentElement.scrollTop; //Высоту всего документа
+
+  var documentHeight = document.documentElement.scrollHeight; //Высоту экрана пользователя
+
+  var viewportHeight = document.documentElement.clientHeight; //Разницу между высотой сайта и высотой экрана пользователя
+
+  var height = documentHeight - viewportHeight; //Процент прокрутки
+
+  var scrollPercent = scrollValue / height * 100; //Стили прогресс бара
+
+  progress.style.width = scrollPercent + '%';
+}
+
+;
+window.addEventListener('scroll', animateProgressBar);
