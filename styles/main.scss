@@ -17,8 +17,8 @@
   height: 10px;
   background: #5c6370;
   border-radius: 30px;
-  // .progress__bar
 
+  // .progress__bar
   &__bar {
     position: absolute;
     left: 0;
@@ -44,8 +44,8 @@
   height: 100vh;
   background: #ffffff;
   border-right: 1px solid #5c6370;
-  // .nav__list
 
+  // .nav__list
   &__list {
     list-style-type: none;
     display: flex;
@@ -53,9 +53,7 @@
     gap: 20px;
   }
 
-
   // .nav__link
-
   &__link {
     font-size: 22px;
     color: #5c6370;
@@ -63,7 +61,6 @@
 
     &.active {
       color: #000ee6;
-
     }
   }
 }
@@ -91,21 +88,55 @@ main {
 
   &.section-2 {
     background: beige;
-
   }
 
   &.section-3 {
     background: bisque;
-
   }
 
   &.section-4 {
     background: palegoldenrod;
-
   }
 
   &.section-5 {
     background: lavender;
+  }
+}
 
+@media(max-width: 600px) {
+  .nav {
+    max-width: 210px;
+    padding: 25px;
+  }
+
+  .progress {
+    width: 160px;
+  }
+
+  main {
+    margin-left: 210px;
+  }
+
+  .section {
+    font-size: 36px;
+  }
+
+  .nav__link {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 450px) {
+  .nav {
+    max-width: 150px;
+    padding: 10px;
+  }
+
+  .progress {
+    width: 130px;
+  }
+
+  main {
+    margin-left: 150px;
   }
 }

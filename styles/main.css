@@ -88,3 +88,34 @@ main::-webkit-scrollbar {
 .section.section-5 {
   background: lavender;
 }
+
+@media (max-width: 600px) {
+  .nav {
+    max-width: 210px;
+    padding: 25px;
+  }
+  .progress {
+    width: 160px;
+  }
+  main {
+    margin-left: 210px;
+  }
+  .section {
+    font-size: 36px;
+  }
+  .nav__link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  .nav {
+    max-width: 150px;
+    padding: 10px;
+  }
+  .progress {
+    width: 130px;
+  }
+  main {
+    margin-left: 150px;
+  }
+}
